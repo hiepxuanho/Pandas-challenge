@@ -54,8 +54,8 @@ By the end of this project, we aim to deliver:
     ```
 
 ## Note:
-The first half of the project was pretty straight forward involves using functions such as mean(), count(), unique() 
-I got stuck at the part where we needed to calculate the total school budget and per capita spending per school from school_data. The professor had to explain the logic and showed me the sample code of how to find it.
+The first half of the project was pretty straight forward involves using functions such as mean(), count(), unique(). 
+I got stuck at the part where I needed to calculate the total school budget and per capita spending per school from school_data. The professor had to explain the logic and showed me the sample code of how to find it.
 /-----------------------------------/
 per_school_budget = school_data.set_index(["school_name"])["budget"]
 per_school_capita = per_school_budget / per_school_counts
