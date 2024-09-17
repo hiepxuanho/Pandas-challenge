@@ -56,19 +56,28 @@ By the end of this project, we aim to deliver:
 ## Note:
 The first half of the project was pretty straight forward involves using functions such as mean(), count(), unique(). 
 I got stuck at the part where I needed to calculate the total school budget and per capita spending per school from school_data. The professor had to explain the logic and showed me the sample code of how to find it.
+
 /-----------------------------------/
+
 per_school_budget = school_data.set_index(["school_name"])["budget"]
+
 per_school_capita = per_school_budget / per_school_counts
+
 /-----------------------------------/
 
 /------------------Chat GPT----------/
+
 top_schools = per_school_summary.sort_values(by="% Overall Passing", ascending=False)
+
 /-----------------------------------/
 
 I ran into a problem while using 'pd.cut' on the per_school-capita seires to categorize per studnet spending based on the bins.
 I kept getting invalid error because of the '$' sign in the 'Per Student Budget' column. I had to use Chat GPT to help me remove any signs and convert it to float.
+
 /------------------Chat GPT----------/
+
 school_spending_df["Per Student Budget"] = school_spending_df["Per Student Budget"].replace({'\$': '', ',': ''}, regex=True).astype(float)
+
 /-----------------------------------/
 
 The rest of the project is pretty simple, since I only had to create new dataframe from the new given calculations in the sample codes by using 
