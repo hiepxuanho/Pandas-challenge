@@ -7,11 +7,6 @@ As the newly appointed Chief Data Scientist for our city's school district, my p
 ## Objective
 The objective of this project is to aggregate and analyze student performance data across all schools in the district. By exploring various metrics such as math and reading scores and school-specific information, we aim to identify trends in school performance that can help guide decision-making for the district.
 
-## Data
-The dataset contains the following information:
-- **Student Scores**: Math and Reading standardized test results for every student.
-- **School Information**: Details regarding the schools that students attend, including location, size, and type (public/private).
-- **Additional Metrics**: Any relevant demographic or funding information that can affect school performance.
 
 ## Tasks
 1. **Data Aggregation**: Combine student performance data with school-specific information.
@@ -58,6 +53,11 @@ By the end of this project, we aim to deliver:
     jupyter notebook
     ```
 
-## License
-This project is licensed under the MIT License.
+## Note:
+The first half of the project was pretty straight forward involves using functions such as mean(), count(), unique() 
+I got stuck at the part where we needed to calculate the total school budget and per capita spending per school from school_data. The professor had to explain the logic and showed me the sample code of how to find it.
+/-----------------------------------/
+per_school_budget = school_data.set_index(["school_name"])["budget"]
+per_school_capita = per_school_budget / per_school_counts
+/-----------------------------------/
 
